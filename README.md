@@ -167,7 +167,7 @@ INFO:     Application startup complete.
 
 ```
 INFO:     127.0.0.1:49969 - "GET /docs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49969 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49969 - "GET /openapi/playground HTTP/1.1" 200 OK
 INFO:     127.0.0.1:50092 - "POST /openai/invoke HTTP/1.1" 200 OK
 INFO:     127.0.0.1:50226 - "POST /openai/stream HTTP/1.1" 200 OK
 ```
