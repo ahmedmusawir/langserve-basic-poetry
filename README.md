@@ -109,14 +109,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ------------- DEFAULT ROUTE START ----------------
+# Creating the Doc route
+@app.get("/")
+async def redirect_root_to_docs():
+    return RedirectResponse("/docs")
+
+# ------------- DEFAULT AI ROUTE START ----------------
 
 model = ChatOpenAI(openai_api_key=config("OPENAI_API_KEY"))
 prompt = ChatPromptTemplate.from_template("Give me a summary about {topic} in a paragraph or less.")
 chain = prompt | model
 add_routes(app, chain, path="/openai")
 
-# ------------- DEFAULT ROUTE ENDS ----------------
+# ------------- DEFAULT AI ROUTE ENDS ----------------
 
 if __name__ == "__main__":
     import uvicorn
