@@ -15,6 +15,7 @@ langserve = {extras = ["all"], version = "^0.2.2"}
 pydantic = ">=2.7.4,<3.0.0"  
 langchain-openai = "^0.1.19"
 python-decouple = "^3.8"
+langsmith = "^0.1.96"
 
 [tool.poetry.group.dev.dependencies]
 langchain-cli = ">=0.0.15"
